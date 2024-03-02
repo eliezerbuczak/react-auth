@@ -5,9 +5,8 @@ import Settings from '../screens/Settings';
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigation() {
+export default function TabRoutes() {
   return (
-  <NavigationContainer>
     <Tab.Navigator initialRouteName="Home"
     screenOptions={{headerTitle: '', headerShown: false}}>
       <Tab.Screen
@@ -19,6 +18,5 @@ export default function Navigation() {
         name="Settings"
         component={Settings}/>
     </Tab.Navigator>
-  </NavigationContainer>
   );
 }

@@ -6,12 +6,13 @@ import InputText from '../../components/inputs/inputText';
 
 export default function Home() {
     const handleLogin = () => {
-            navigation.navigate('Login')
+            console.log('Botão de login pressionado');
     };
     return (<>
-           <InputText text="Home" />
-           <ButtonDefault text="Home" onPress={handleLogin}/>
-           <ButtonDefault text="Home" onPress={handleLogin}/></>
+           <InputText text="Digite seu usuário" />
+           <InputText text="Digite sua senha" />
+           <ButtonDefault text="Login" onPress={handleLogin}/>
+           <ButtonDefault text="Criar Conta" onPress={handleLogin}/></>
     );
 }
 

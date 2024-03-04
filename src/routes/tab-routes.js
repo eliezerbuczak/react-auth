@@ -2,12 +2,12 @@ import  { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
 import Settings from '../screens/Settings';
+import StackRoutes from './stack-routes';
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigation() {
+export default function TabRoutes() {
   return (
-  <NavigationContainer>
     <Tab.Navigator initialRouteName="Home"
     screenOptions={{headerTitle: '', headerShown: false}}>
       <Tab.Screen
@@ -18,7 +18,9 @@ export default function Navigation() {
       <Tab.Screen
         name="Settings"
         component={Settings}/>
+      <Tab.Screen
+              name="StackRoutes"
+              component={StackRoutes}/>
     </Tab.Navigator>
-  </NavigationContainer>
   );
 }

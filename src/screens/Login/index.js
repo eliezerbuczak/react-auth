@@ -4,27 +4,13 @@ import { View, Text, StyleSheet } from 'react-native';
 import ButtonDefault from '../../components/buttons/buttonDefault';
 import InputText from '../../components/inputs/inputText';
 
-export default function Home() {
+export default function Home({ navigation }) {
     const handleLogin = () => {
-            console.log('Botão de login pressionado');
+            navigation.navigate('Other')
     };
-    return (<>
-           <InputText text="Digite seu usuário" />
-           <InputText text="Digite sua senha" />
-           <ButtonDefault text="Login" onPress={handleLogin}/>
-           <ButtonDefault text="Criar Conta" onPress={handleLogin}/></>
+    return (<View className="flex flex-col justify-center bg-gray-200 h-full w-full items-center space-y-4">
+            <ButtonDefault text="Login" onPress={handleLogin}/>
+            <ButtonDefault text="Criar Conta" onPress={handleLogin}/>
+           </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#fffr',
-        flex: 1,
-    },
-    contentContainer: {
-        paddingLeft: 56,
-        paddingRight: 56,
-        paddingTop: 150,
-        gap: 32,
-    }
-});

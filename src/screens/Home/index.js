@@ -6,7 +6,7 @@ import InputText from '../../components/inputs/inputText';
 
 export default function Home() {
     const handleLogin = () => {
-            console.log('Botão de login pressionado');
+            navigation.navigate('Login')
     };
     return (<>
            <InputText text="Home" />
